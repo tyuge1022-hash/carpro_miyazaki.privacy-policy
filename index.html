@@ -1,1 +1,329 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="カープロ宮崎（運営会社：株式会社ユウエス）のプライバシーポリシーです。">
+  <meta name="theme-color" content="#111111">
+  <title>プライバシーポリシー｜カープロ宮崎</title>
+  <style>
+    :root {
+      --black: #111111;
+      --ink: #252525;
+      --red: #a51919;
+      --gold: #c99b43;
+      --cream: #f7f4ee;
+      --white: #ffffff;
+      --line: #e6e0d5;
+    }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+      padding: 12px max(24px, calc((100vw - 1080px) / 2));
+      color: var(--white);
+      background: rgba(17, 17, 17, .96);
+      border-bottom: 1px solid rgba(201, 155, 67, .55);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand { text-decoration: none; line-height: 1.2; }
+    .brand strong { display: block; font-size: 1.25rem; letter-spacing: .08em; }
+    .brand span { color: #d7d7d7; font-size: .7rem; letter-spacing: .18em; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+      color: var(--white);
+      font-size: .85rem;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+    .back-link:hover { border-color: var(--gold); color: #f1d69c; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201, 155, 67, .2), transparent 32%),
+        linear-gradient(135deg, #171717 0%, #0d0d0d 70%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .15;
+      background-image: linear-gradient(115deg, transparent 48%, var(--gold) 49%, var(--gold) 50%, transparent 51%);
+      background-size: 110px 110px;
+    }
+
+    .hero-inner {
+      position: relative;
+      width: min(1080px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 88px 0 82px;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
+      color: #e1bf7a;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 42px; height: 2px; background: var(--red); }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.25; letter-spacing: .04em; }
+    .hero-copy { max-width: 680px; margin: 22px 0 0; color: #d5d5d5; font-size: 1rem; }
+
+    .carport-line {
+      position: absolute;
+      right: 2%;
+      bottom: -10px;
+      width: min(370px, 36vw);
+      height: 145px;
+      opacity: .55;
+      border-top: 4px solid var(--gold);
+      transform: skewX(-12deg);
+    }
+    .carport-line::before,
+    .carport-line::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--gold);
+    }
+    .carport-line::before { left: 8%; }
+    .carport-line::after { right: 8%; }
+
+    main {
+      width: min(940px, calc(100% - 40px));
+      margin: -26px auto 70px;
+      position: relative;
+    }
+    .policy-card {
+      padding: clamp(28px, 6vw, 70px);
+      background: var(--white);
+      border-top: 5px solid var(--red);
+      box-shadow: 0 24px 70px rgba(20, 20, 20, .1);
+    }
+    .lead {
+      margin: 0 0 48px;
+      padding: 22px 24px;
+      background: #faf8f4;
+      border-left: 3px solid var(--gold);
+      font-size: .98rem;
+    }
+
+    .policy-section { padding: 34px 0; border-top: 1px solid var(--line); }
+    .policy-section:first-of-type { border-top: 0; }
+    .section-title {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 19px;
+      color: var(--black);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      line-height: 1.45;
+    }
+    .number {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      color: var(--white);
+      background: var(--black);
+      border-bottom: 3px solid var(--gold);
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+    }
+    p { margin: 0 0 15px; }
+    .policy-list { margin: 18px 0 12px; padding: 0; list-style: none; }
+    .policy-list li { position: relative; padding: 7px 0 7px 28px; }
+    .policy-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 1.14em;
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      transform: rotate(45deg);
+    }
+    .contact-box {
+      display: grid;
+      gap: 8px;
+      margin: 20px 0;
+      padding: 22px;
+      background: var(--black);
+      color: var(--white);
+      border-left: 4px solid var(--gold);
+    }
+    .contact-box span { color: #cfb477; font-size: .78rem; letter-spacing: .1em; }
+    .established { margin-top: 18px; color: #666; text-align: right; font-size: .9rem; }
+
+    .page-footer {
+      padding: 38px 20px;
+      color: #aaa;
+      background: var(--black);
+      text-align: center;
+      font-size: .78rem;
+      letter-spacing: .05em;
+    }
+    .footer-brand { display: block; margin-bottom: 8px; color: var(--white); font-size: 1rem; font-weight: 700; }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      color: var(--white);
+      background: var(--red);
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(165, 25, 25, .3);
+    }
+
+    @media (max-width: 640px) {
+      .site-header { min-height: 62px; padding: 10px 16px; }
+      .brand strong { font-size: 1.05rem; }
+      .brand span { display: none; }
+      .back-link { padding: 7px 11px; font-size: .75rem; }
+      .hero-inner { width: calc(100% - 34px); padding: 62px 0 68px; }
+      .carport-line { width: 180px; height: 92px; opacity: .25; }
+      main { width: calc(100% - 24px); margin-top: -18px; }
+      .policy-card { padding: 28px 20px 36px; }
+      .lead { margin-bottom: 30px; padding: 18px; }
+      .policy-section { padding: 27px 0; }
+      .section-title { grid-template-columns: 38px 1fr; gap: 11px; }
+      .number { width: 38px; height: 38px; }
+    }
+
+    @media print {
+      .site-header, .to-top, .carport-line { display: none; }
+      .hero { background: var(--white); color: var(--black); }
+      .hero-inner { padding: 20px 0; }
+      .hero-copy { color: var(--ink); }
+      main { width: 100%; margin: 0; }
+      .policy-card { padding: 20px 0; border: 0; box-shadow: none; }
+      .page-footer { background: var(--white); color: var(--ink); }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="カープロ宮崎 プライバシーポリシー上部へ">
+      <strong>CARPRO MIYAZAKI</strong>
+      <span>カーポート・外構工事専門店</span>
+    </a>
+    <a class="back-link" href="javascript:history.back()" aria-label="前のページへ戻る">← カープロサイトへ戻る</a>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-inner">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1 id="page-title">プライバシーポリシー</h1>
+      <p class="hero-copy">カープロ宮崎は、お客様からお預かりする個人情報を大切に取り扱い、適切な管理と保護に努めます。</p>
+      <div class="carport-line" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <main>
+    <article class="policy-card">
+      <p class="lead">カープロ宮崎（運営会社：株式会社ユウエス。以下「当社」といいます。）は、お客様の個人情報を適切に取り扱い、保護することを重要な責務と考え、以下のとおりプライバシーポリシーを定めます。</p>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">01</span><span>取得する個人情報</span></h2>
+        <p>当社は、お問い合わせ、お見積り依頼、現地調査のお申し込み、キャンペーンへのご応募等に際して、以下の情報を取得する場合があります。</p>
+        <ul class="policy-list">
+          <li>氏名</li><li>電話番号</li><li>メールアドレス</li><li>住所・施工予定地域</li><li>お問い合わせ・ご相談内容</li><li>その他、お客様が当社に提供された情報</li>
+        </ul>
+        <p>また、Meta（Facebook・Instagram）等の広告サービスを通じてお問い合わせいただいた場合、当該サービスを通じて提供された情報を取得する場合があります。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">02</span><span>個人情報の利用目的</span></h2>
+        <p>当社は、取得した個人情報を以下の目的で利用します。</p>
+        <ul class="policy-list">
+          <li>お問い合わせ・ご相談への回答</li><li>カーポート、外構工事等のお見積り作成</li><li>現地調査・打ち合わせ等の日程調整</li><li>ご契約いただいた工事・サービスの提供</li><li>商品、サービス、キャンペーン等のご案内</li><li>アフターサービスその他必要なご連絡</li><li>サービス向上のための分析・改善</li><li>その他、お客様からご依頼いただいた事項への対応</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">03</span><span>個人情報の第三者提供</span></h2>
+        <p>当社は、法令に基づく場合を除き、ご本人の同意なく個人情報を第三者へ提供することはありません。</p>
+        <p>ただし、サービス提供に必要な範囲で業務委託先等に個人情報の取り扱いを委託する場合があります。その場合は、適切な管理・監督を行います。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">04</span><span>個人情報の安全管理</span></h2>
+        <p>当社は、個人情報への不正アクセス、紛失、改ざん、漏えい等を防止するため、必要かつ適切な安全管理措置を講じます。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">05</span><span>外部サービスについて</span></h2>
+        <p>当サイトおよび当社の広告では、Meta Platforms, Inc.が提供するFacebook・Instagram等の外部サービスを利用する場合があります。</p>
+        <p>これらのサービスにおける個人情報等の取り扱いについては、各サービス提供事業者が定めるプライバシーポリシー等をご確認ください。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">06</span><span>個人情報の開示・訂正・削除等</span></h2>
+        <p>ご本人から、当社が保有する個人情報について開示、訂正、利用停止、削除等のお申し出があった場合は、ご本人確認のうえ、法令に従って適切に対応します。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">07</span><span>プライバシーポリシーの変更</span></h2>
+        <p>当社は、法令の変更やサービス内容の変更等に応じて、本プライバシーポリシーを必要に応じて改定する場合があります。</p>
+      </section>
+
+      <section class="policy-section">
+        <h2 class="section-title"><span class="number">08</span><span>お問い合わせ窓口</span></h2>
+        <div class="contact-box">
+          <div><span>サービス名</span><br>カープロ宮崎</div>
+          <div><span>運営会社</span><br>株式会社ユウエス</div>
+        </div>
+        <p>個人情報の取り扱いに関するお問い合わせは、当サイトのお問い合わせ窓口までお願いいたします。</p>
+        <p class="established">制定日：2026年8月14日</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <span class="footer-brand">CARPRO MIYAZAKI</span>
+    <span>© 2026 株式会社ユウエス</span>
+  </footer>
+  <a class="to-top" href="#top" aria-label="ページ上部へ戻る">↑</a>
+</body>
+</html>
